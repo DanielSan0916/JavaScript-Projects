@@ -1,1 +1,1 @@
-alert("Hello, welcome to Project 1: Expressions and Alerts!");
+document.write("Hello, World!");
