@@ -4,3 +4,10 @@ function My_First_Function() {
     document.getElementById("Button_Text").innerHTML = str;
     document.getElementById("Button_Text").style.color = color; // Using second variable to change text color
 }
+
+//using Operatos to concatenate strings
+function myFunction() {
+    var sentence = "I am learning";
+    sentence += " a lot from this class!";
+    document.getElementById("Concatenate").innerHTML = sentence;
+}
