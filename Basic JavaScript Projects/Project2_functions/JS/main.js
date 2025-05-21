@@ -7,7 +7,7 @@ function My_First_Function() {
 
 //using Operatos to concatenate strings
 function myFunction() {
-    var sentence = "I am learning";
-    sentence += " a lot from this class!";
-    document.getElementById("Concatenate").innerHTML = sentence;
+    var sentence = "I am learning"; //creating the variable
+    sentence += " a lot from this class!"; //using the += operator to add the variable to the string
+    document.getElementById("Concatenate").innerHTML = sentence; //using document.getElementById to get the element with the id of Concatenate
 }
