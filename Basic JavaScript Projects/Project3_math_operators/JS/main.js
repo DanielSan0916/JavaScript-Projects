@@ -7,13 +7,13 @@ function subtraction_Function() {
     var subtraction = 10 - 5; // Perform subtraction
     document.getElementById("Math2").innerHTML = "10 - 5 = " + subtraction;
 }
-function multiplication_Function() {
-    var multiplication = 10 * 10; // Perform multiplication
-    document.getElementById("Math3").innerHTML = "10 * 10 = " + simple_math;
+function multiplication() {
+    var simple_Math = 10 * 10; // Perform multiplication
+    document.getElementById("Math3").innerHTML = "10 * 10 = " + simple_Math;
 }
-function division_Function() {
-    var division = 10 / 2; // Perform division
-    document.getElementById("Math4").innerHTML = "10 / 2 = " + simple_math;
+function division() {
+    var simple_Math = 10 / 2; // Perform division
+    document.getElementById("Math4").innerHTML = "10 / 2 = " + simple_Math;
 }
 function more_Math() {  
     var simple_Math = (1 + 2) * 10 / 2 - 5; // Perform a more complex math operation
