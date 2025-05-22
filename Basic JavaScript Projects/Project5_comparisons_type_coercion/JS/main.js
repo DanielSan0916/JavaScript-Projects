@@ -14,7 +14,7 @@ function infinity() {
         document.getElementById("infinity").innerHTML = 2E310; // This will return Infinity because the number is too large
 }
 
-function -infinity() {
+function negative_infinity() {
         document.getElementById("negativeinfinity").innerHTML = -3E310; // This will return -Infinity because the number is too large in the negative direction
 }   
 
