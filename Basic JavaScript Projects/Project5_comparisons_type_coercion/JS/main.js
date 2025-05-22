@@ -18,3 +18,6 @@ function negative_infinity() {
         document.getElementById("negativeinfinity").innerHTML = -3E310; // This will return -Infinity because the number is too large in the negative direction
 }   
 
+function boolean() {
+        document.getElementById("boolean").innerHTML = 2 > 1; // This will return true because 2 is greater than 1
+}
