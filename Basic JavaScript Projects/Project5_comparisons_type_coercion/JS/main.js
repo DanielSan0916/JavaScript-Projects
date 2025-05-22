@@ -21,3 +21,5 @@ function negative_infinity() {
 function boolean() {
         document.getElementById("boolean").innerHTML = 2 > 1; // This will return true because 2 is greater than 1
 }
+
+console.log(5 + 3); // This will output: 8 on the console when pressing F12
