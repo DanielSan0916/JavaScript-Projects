@@ -15,3 +15,7 @@ function division_Function() {
     var division = 10 / 2; // Perform division
     document.getElementById("Math4").innerHTML = "10 / 2 = " + simple_math;
 }
+function more_Math() {  
+    var simple_Math = (1 + 2) * 10 / 2 - 5; // Perform a more complex math operation
+    document.getElementById("Math5").innerHTML = "1 plus 2, multiplied 10, divided by 2, minus 5 equals " + simple_Math;
+}
