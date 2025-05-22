@@ -27,3 +27,7 @@ console.log(5 + 3); // This will output: 8 on the console when pressing F12
 function boolean_object() {
         document.getElementById("booleanobject").innerHTML = (10 < 5); // This will return false because 10 is not less than 5
 }
+
+function boolean_object2() {
+        document.getElementById("booleanobject2").innerHTML = (10 == 10); // This will return true because 10 is equal to 10
+}
