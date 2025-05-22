@@ -19,7 +19,7 @@ function division() {
 }
 
 function random() {
-    document.getElementById("Ran").innerHTML = random; // Display the random number
+    document.getElementById("Ran").innerHTML = Math.random()*10; // Display the random number
 }   
 
 function more_Math() {  
