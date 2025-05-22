@@ -1,3 +1,3 @@
  function type_of() {
-        document.getElementById("input").innerHTML = typeof "2";
+        document.getElementById("typeof").innerHTML = typeof 2;
 }
