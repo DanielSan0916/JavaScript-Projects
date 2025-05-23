@@ -31,3 +31,38 @@ function boolean_object() {
 function boolean_object2() {
         document.getElementById("booleanobject2").innerHTML = (10 == 10); // This will return true because 10 is equal to 10
 }
+
+
+//variable with a Boolean data type
+var x = true;
+
+//printing the data type of th evariable x
+document.write(typeof x); // This will return "boolean"
+document.write("<br>");
+
+//an expression combining a string and a number
+document.write("10" + 10); // This will return "1010" because the number is coerced to a string
+document.write("<br>");
+
+// utilizing the == operator
+document.write(5 == 5); // This will return true because 5 is equal to 5
+document.write("<br>");
+
+// utilizing the === operator
+x = 1;
+y = 1;
+document.write(x === y); // This will return true because both x and y are equal and of the same type
+document.write("<br>");
+
+//utilizing the > and && operators
+document.write(5 > 3 && 10 > 5); // This will return true because both conditions are true
+document.write("<br>");
+
+//utilizing the < and || operators
+document.write(5 < 3 || 10 > 5); // This will return true because one of the conditions is true
+document.write("<br>");
+
+//Utilizing the ! operator
+function not_Function() {
+        document.getElementById("Not").innerHTML = !(1 > 2); // This will return true because 1 is not greater than 2, and the ! operator negates the result
+}
