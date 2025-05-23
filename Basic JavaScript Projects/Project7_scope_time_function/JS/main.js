@@ -26,7 +26,7 @@ function get_Reply() {
     var user_input = document.getElementById("userInput").value;
     if (user_input % 2 === 0) {
         reply = "You entered an even number!";
-        document.getElementById("feedback").innerHTML =;
+        document.getElementById("feedback").innerHTML = reply;
     }
     else {
         reply = "You entered an odd number!";
