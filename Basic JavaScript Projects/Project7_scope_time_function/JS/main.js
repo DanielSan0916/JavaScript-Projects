@@ -1,15 +1,18 @@
 //Assigning local and global variables
 var x = 10; //global variable
 
-function Add_numbers() {
+function Add_numbers_1() {
     var  x = 99; //local variable
     document.write(10 + x + "<br>"); // using local variable
 }
 
-function Add_numbers2() {
+function Add_numbers_2() {
     document.write(x + 11); // using global variable
-    console.log(x); //using console.log to debug whcih variable is being used
+    console.log(x); //using console.log to debug which variable is being used
 }
+
+Add_numbers_1(); // calling the function
+Add_numbers_2(); // calling the function
 
 //A function that includes an if statement
 function get_Date() {
@@ -20,15 +23,19 @@ function get_Date() {
 
 //A function with if else statement
 function get_Reply() {
-    var user_input = document.getElementById("user_input").value;
+    var user_input = document.getElementById("userInput").value;
     if (user_input % 2 === 0) {
-        reply = "You entered an even number.";
+        reply = "You entered an even number!";
         document.getElementById("feedback").innerHTML =;
+    }
+    else {
+        reply = "You entered an odd number!";
+        document.getElementById("feedback").innerHTML = reply;
     }
 }
 
 //Utilizing the time_function() from previous slides
-function time_function() {
+function Time_function() {
     var Time = new Date().getHours();
     var Reply;
     if (Time < 12 == Time > 0) {
