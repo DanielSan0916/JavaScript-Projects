@@ -16,7 +16,7 @@ function slice_Method() {
 
 // Using the .toString() method
 function string_Method() {
-    Var myNumber = 999;
+    var myNumber = 999;
     document.getElementById("ToString").innerHTML = myNumber.toString();
 }
 
