@@ -21,7 +21,7 @@ function string_Method() {
 }
 
 // Using the .toPrecision() method
-function precision_Method() {
-    var myNumber = 123456789;
-    document.getElementById("SpecificLength").innerHTML = num.toPrecision(5);
+function precision_method() {
+    var myNumber = 123.123456789;
+    document.getElementById("SpecificLength").innerHTML = myNumber.toPrecision(5);
 } 
