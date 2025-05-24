@@ -3,7 +3,7 @@ function full_sentence(){
     var part1 = "The quick brown fox";
     var part2 = "jumps over the lazy dog.";
     var part3 = "This is a classic example of a pangram.";
-    var Whole_sentence = part_1.concat(part_2, part_3);
+    var Whole_sentence = part1.concat(part2, part3);
     document.getElementById("StringMethod").innerHTML = Whole_sentence;
 }
 
@@ -16,8 +16,8 @@ function slice_Method() {
 
 // Using the .toString() method
 function string_Method() {
-    var myNumber = 999;
-    document.getElementById("ToString").innerHTML = myNumber.toString();
+    var number = 999;
+    document.getElementById("ToString").innerHTML = number.toString();
 }
 
 // Using the .toPrecision() method
