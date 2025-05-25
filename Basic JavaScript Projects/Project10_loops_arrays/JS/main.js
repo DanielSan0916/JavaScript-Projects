@@ -40,5 +40,5 @@ function car() {
         year: 2020,
         color: "Blue",
     };
-    document.getElementById("Car").innerHTML = "I have a" + car.year + " " + car.color + " " + car.make + " " + car.model + ".";
+    document.getElementById("Car").innerHTML = "I have a" + car.year + " " + car.color + " " + car.make + ".";
 }
