@@ -52,7 +52,7 @@ function array_Function() {
 
 // Creating an object using the let keyword
     let person = {
-        name: "Danie",
+        name: "Daniel",
         age: 25,
         favoriteActivity: "hiking",
 
