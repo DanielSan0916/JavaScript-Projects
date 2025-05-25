@@ -3,32 +3,32 @@
     <head>
         <title>Project9_countdown_slideshow Assignment</title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="CSS/main.css"> <!--links to CSS file-->
+        <link rel="stylesheet" type="text/css" href="CSS/main.css"> <!--links to CSS file-->
     </head>
 
     <body>
         <!--Countdown Timer Section-->
          <p>How many seconds would you like to set your alarm for?</p>
-         <input id="seconds" value=""/>
-         <button onclick="countdown()">Set Alarm</button>
+         <input type ="number" id="seconds" value=""/>
+         <button onclick="countdown()" id="startBtn">Set Alarm</button>
          <p id="timer"></p>
 
         <!--Slideshow Section-->
         <div class="slideshow-container">
             <!--full width images with number and caption text-->
-            <div class="myslides fade">
-                <div class="numbertext">1 / 3</div>
+            <div class="mySlides fade">
+                <div class="numbertext">1/3</div>
                 <img src="img/car1.jpg" style="width: 100%" alt="Blue Shelby Cobra"/>
                 <div class="text">Blue Shelby Cobra</div>
              </div>
 
-            <div class="myslides fade">
-                <div class="numbertext">2 / 3</div>
+            <div class="mySlides fade">
+                <div class="numbertext">2/3</div>
                 <img src="img/car2.jpg" style="width: 100%" alt="Black MG convertible"/>
                 <div class="text">Black MG convertible</div>
             </div>
         
-            <div class="myslides fade">
+            <div class="mySlides fade">
                 <div class="numbertext">3 / 3</div>
                 <img src="img/car3.jpg" style="width: 100%" alt="Red Chevelle SS" />
                 </div class="text">Red Chevelle SS</div>
@@ -42,12 +42,12 @@
 
         <!--The current selection circles-->
         <div style="text-align: center">
-            <span class="dot" onclick="currentslide (1)"></span> 
-            <span class="dot" onclick="currentslide(2)"></span> 
-            <span class="dot" onclick="currentslide (3) "></span>
+            <span class="dot" onclick="currentSlide (1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide (3) "></span>
         </div>
 
         <script src="JS/main.js"></script> <!--links to JS file-->
     </body>
-    
+
 </html>
