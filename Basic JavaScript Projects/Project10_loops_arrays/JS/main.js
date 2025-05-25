@@ -64,5 +64,5 @@ function array_Function() {
 
 // Function to call the object's method and display the message
     function constant_function() {
-        document.getElementById("Constant").innerHTML = person.introduce();
+        document.getElementById("ConstantLet").innerHTML = person.introduce();
     }
