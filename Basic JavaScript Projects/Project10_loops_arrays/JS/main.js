@@ -1,68 +1,43 @@
-// This function demonstrates the use of a loop
-function Call_Loop() {
-    let i = 0;
-    let result = "";
-
-    while (i < 5) {
-        result += "Loop iteration: " + i + "<br>";
-        i++;
+// a function using a while loop
+function count_to_Ten() {
+    var Digit = "";
+    var x = 1;
+    while (x <= 11) {
+        Digit += "<br>" + x;
+        x++;
     }
-
-    document.getElementById("Loop").innerHTML = result;
+    document.getElementById("Counting_to+Ten").innerHTML = Digit;
 }
 
-// This function demonstrates the use of a for loop
+//A function using a for loop
+var Instruments = ["Guitar", "Piano", "Drums", "Bass", "Violin"];
+var Content = "";
+var y;
 function for_Loop() {
-    let instruments = ["Guitar", "Piano", "Violin", "Drums", "Flute"];
-    let result = "";
-
-    for (let i = 0; i < instruments.length; i++) {
-        result += "Instrument: " + instruments[i] + "<br>";
+    for (y = 0; y < Instruments.length; y++) {
+        Content += Instruments[y] + "<br>";
     }
-
-    document.getElementById("List_of_Instruments").innerHTML = result;
+    document.getElementById("List_of_Instruments").innerHTML = Content;
 }
 
-
-// This function demonstrates the use of an array
-function array_Function() {
-    let myArray = ["Apple", "Banana", "Cherry", "Date"];
-    document.getElementById("Array").innerHTML = myArray.join(", ");
+//A function with an array
+function color_array() {
+    var Colors = [];
+    Colors[0] = "Red";
+    Colors[1] = "Blue";
+    Colors[2] = "Green";
+    Colors[3] = "Yellow";
+    Colors[4] = "Purple";
+    document.getElementById("Array").innerHTML = "May favorite color is" + Colors[6] + ".";
 }
 
-// Use of an object using the const keyword
-        const myObject = {
-            name: "Daniel",
-            age: 25,
-            hobby: "coding"
-        };
-
-// Use of a Function to display a property value 
-        myObject.hobby = "gaming"; //** Update - Changed a property’s value
-
-        // Adding a new property with a value
-        myObject.favoriteColor = "blue"; //** Update - Added a new property
-
-        // Function to display the changed and added properties
-        function constant_function() {
-            document.getElementById("Constant").innerHTML = 
-                `Hello, my name is ${myObject.name}. My favorite color is ${myObject.favoriteColor}, and I now enjoy ${myObject.hobby}!`;
-        }
-
-
-// Creating an object using the let keyword
-    let person = {
-        name: "Daniel",
-        age: 25,
-        favoriteActivity: "hiking",
-
-// Method to display a message using object properties
-    introduce: function() {
-        return `Hello! My name is ${this.name}, I am ${this.age} years old, and I love ${this.favoriteActivity}.`;
-        }
+//Creating an object with the let keyword
+function car() {
+    let car = {
+        make: "Toyota",
+        model: "Camry",
+        year: 2020,
+        color: "Blue",
     };
-
-// Function to call the object's method and display the message
-    function constant_function() {
-        document.getElementById("ConstantLet").innerHTML = person.introduce();
-    }
+    document.getElementById("Car").innerHTML = "I have a" + car.year + " " + car.color + " " + car.make + " " + car.model + ".";
+}
