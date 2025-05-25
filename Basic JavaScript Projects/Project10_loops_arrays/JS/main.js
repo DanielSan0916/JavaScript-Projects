@@ -6,7 +6,7 @@ function count_to_Ten() {
         Digit += "<br>" + x;
         x++;
     }
-    document.getElementById("Counting_to+Ten").innerHTML = Digit;
+    document.getElementById("Counting_to_Ten").innerHTML = Digit;
 }
 
 //A function using a for loop
