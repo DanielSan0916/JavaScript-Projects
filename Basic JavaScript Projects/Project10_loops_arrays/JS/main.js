@@ -36,8 +36,8 @@ function color_array() {
 function car() {
     let car = {
         make: "Toyota",
-        year: 2020,
+        year: "2020",
         color: "Blue",
     };
-    document.getElementById("Car").innerHTML = "I have a" + car.year + " " + car.color + " " + car.make + ".";
+    document.getElementById("Car").innerHTML = "I have a " + car.year + " " + car.color + " " + car.make + ".";
 }
