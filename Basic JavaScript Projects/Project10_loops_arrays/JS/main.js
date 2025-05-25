@@ -29,14 +29,13 @@ function color_array() {
     Colors[4] = "Yellow";
     Colors[5] = "Purple";
     Colors[6] = "Orange";
-    document.getElementById("Array").innerHTML = "May favorite color is" + Colors[6] + ".";
+    document.getElementById("Array").innerHTML = "May favorite color is " + Colors[6] + ".";
 }
 
 //Creating an object with the let keyword
 function car() {
     let car = {
         make: "Toyota",
-        model: "Camry",
         year: 2020,
         color: "Blue",
     };
