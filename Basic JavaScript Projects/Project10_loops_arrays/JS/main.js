@@ -29,3 +29,16 @@ function array_Function() {
     let myArray = ["Apple", "Banana", "Cherry", "Date"];
     document.getElementById("Array").innerHTML = myArray.join(", ");
 }
+
+// Use of an object using the const keyword
+        const myObject = {
+            name: "Daniel",
+            age: 25,
+            hobby: "coding"
+        };
+
+// Use of a Function to display a property value
+        function constant_function() {
+            document.getElementById("Constant").innerHTML = 
+                `Hello, my name is ${myObject.name}, and I love ${myObject.hobby}!`;
+        }
