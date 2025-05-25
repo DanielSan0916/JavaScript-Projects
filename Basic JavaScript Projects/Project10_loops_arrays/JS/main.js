@@ -37,8 +37,14 @@ function array_Function() {
             hobby: "coding"
         };
 
-// Use of a Function to display a property value
+// Use of a Function to display a property value 
+        myObject.hobby = "gaming"; //** Update - Changed a property’s value
+
+        // Adding a new property with a value
+        myObject.favoriteColor = "blue"; //** Update - Added a new property
+
+        // Function to display the changed and added properties
         function constant_function() {
             document.getElementById("Constant").innerHTML = 
-                `Hello, my name is ${myObject.name}, and I love ${myObject.hobby}!`;
+                `Hello, my name is ${myObject.name}. My favorite color is ${myObject.favoriteColor}, and I now enjoy ${myObject.hobby}!`;
         }
