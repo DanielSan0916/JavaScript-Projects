@@ -2,7 +2,7 @@
 function count_to_Ten() {
     var Digit = "";
     var x = 1;
-    while (x <= 11) {
+    while (x < 11) {
         Digit += "<br>" + x;
         x++;
     }
@@ -23,11 +23,12 @@ function for_Loop() {
 //A function with an array
 function color_array() {
     var Colors = [];
-    Colors[0] = "Red";
-    Colors[1] = "Blue";
-    Colors[2] = "Green";
-    Colors[3] = "Yellow";
-    Colors[4] = "Purple";
+    Colors[1] = "Red";
+    Colors[2] = "Blue";
+    Colors[3] = "Green";
+    Colors[4] = "Yellow";
+    Colors[5] = "Purple";
+    Colors[6] = "Orange";
     document.getElementById("Array").innerHTML = "May favorite color is" + Colors[6] + ".";
 }
 
