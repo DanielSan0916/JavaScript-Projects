@@ -48,3 +48,21 @@ function array_Function() {
             document.getElementById("Constant").innerHTML = 
                 `Hello, my name is ${myObject.name}. My favorite color is ${myObject.favoriteColor}, and I now enjoy ${myObject.hobby}!`;
         }
+
+
+// Creating an object using the let keyword
+    let person = {
+        name: "Danie",
+        age: 25,
+        favoriteActivity: "hiking",
+
+// Method to display a message using object properties
+    introduce: function() {
+        return `Hello! My name is ${this.name}, I am ${this.age} years old, and I love ${this.favoriteActivity}.`;
+        }
+    };
+
+// Function to call the object's method and display the message
+    function constant_function() {
+        document.getElementById("Constant").innerHTML = person.introduce();
+    }
