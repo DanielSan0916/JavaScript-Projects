@@ -68,3 +68,13 @@ function checkWinConditions() {
         }
     }
 }
+
+function disableClick() {
+    body.style.pointerEvents = 'none';
+    setTimeout(function () { body.style.pointerEvents = 'auto'; }, 1000);
+}
+
+function audio(audioURL) {
+    let audio = new Audio(audioURL);
+    audio.play();
+}
