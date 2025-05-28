@@ -25,6 +25,8 @@ td {
     width: 200px;
     height: 200px;
     filter: contrast(3);
+    background-size: cover; /* Ensures images fit within cells */
+    background-position: center; /* Centers the images */
 }
 
 canvas {
