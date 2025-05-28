@@ -25,18 +25,16 @@ function placeXOrO(squareNumber) {
         return true;
         
     }
+
     function computersTurn() {
         let success = false;
         let pickASquare;
         while (!success) {
             pickASquare = String(Math.floor(Math.random() * 9));
-            if (placeXOrO(pickASquare)) {
+            if (!selectedSquares.some(element => element.includes(pickASquare))) {
                 placeXOrO(pickASquare);
                 success = true;
-            };
-        }
+            }
+         }
     }
 }
-
-
- 
