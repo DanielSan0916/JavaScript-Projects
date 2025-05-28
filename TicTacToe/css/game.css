@@ -1,5 +1,5 @@
 /*This containe inclides our table and our canvas*/
-.cente-container {
+.center-container {
     /*This property sets the width if the container.*/
     width: 608px;
     /*This property centers our container.*/
@@ -40,4 +40,5 @@ canvas {
 h1 {
     text-align: center;
 }
+
 
