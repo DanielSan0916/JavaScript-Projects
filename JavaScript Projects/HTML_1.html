@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite Camera Selection</title>
+    <script src="JavaScript/JavaScript_1.js" defer></script>
+    <style>
+        canvas {
+            border: 2px solid black; /* Adds a border around the canvas */
+        }
+    </style>
+</head>
+<body>
+   <h1 class="main-title">What is your favorite camera?</h1>
+   <ul class="camera-list">
+       <li>Kodak Camera (1888)</li>
+       <li>Leica I (1925)</li>
+       <li>Nikon F (1959)</li>
+       <li>Canon EOS 300D (2003)</li>
+       <li>Hasselblad 1600F (1948)</li>
+       <li>Olympus PEN E-P1 (2009)</li>
+   </ul>
+
+   <h3>Enter your choice below:</h3>
+
+   <input id="Camera_Input" type="text">
+   <button onclick="Camera_Function()">Submit Camera</button>
+   <p id="Output"></p>
+
+   <!-- Canvas Element -->
+   <canvas id="cameraCanvas" width="400" height="200"></canvas>
+
+   <script>
+       const canvas = document.getElementById("cameraCanvas");
+       const ctx = canvas.getContext("2d");
+
+       // Drawing a simple rectangle as an example
+       ctx.fillStyle = "lightgray";
+       ctx.fillRect(50, 50, 300, 100);
+   </script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* Form Styling */
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: auto;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Input Fields Styling */
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: 0.3s ease-in-out;
+}
+
+/* Focus Effect */
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+    transform: scale(1.05);
+}
+
+/* Labels */
+label {
+    font-weight: bold;
+}
+
+/* Textarea Resize */
+textarea {
+    resize: vertical;
+}
+
+/* Submit Button Styling */
+input[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+}
+
+/* Button Hover Animation */
+input[type="submit"]:hover {
+    transform: scale(1.1);
+    background-color: #0056b3;
+}
+
+/* Shake Effect for Validation Errors */
+input.error {
+    animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+/*Adds better error visibility
+.error {
+    border-color: red;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
