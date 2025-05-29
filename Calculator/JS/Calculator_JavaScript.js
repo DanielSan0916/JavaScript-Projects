@@ -23,7 +23,7 @@ function Input_Digit(digit) {
 
 //This section handles decimal points
 function Input_Decimal(dot) {
-    if (Calculator.Wait_Second_Operand === true) return;
+    if (Calculator.Wait_Second_Operand === 'true') return;
     if (!Calculator.Display_Value.includes(dot)) {
         //If the Display_Value does not include a decimal point, it concatenates the dot to the Display_Value
         Calculator.Display_Value += dot;
@@ -42,15 +42,15 @@ function Handle_Operator(Next_Operator) {
     }
 
     //If no first operand exists, it sets the first operand to the input value
-    if (First_Operand === null) {
+    if (First_Operand == null) {
         Calculator.First_Operand = Value_of_Input;
     } else if (operator) {
         const Value_Now = First_Operand || 0;
         let result = Perform_Calculation[operator](Value_Now, Value_of_Input);
         result = Number(result).toFixed(9); //Fixes the result to 9 decimal places
         result = (result * 1).toString(); //Converts the result to a string
-        Calculator.Display_Value = parseFloat(result);
-        Calculator.First_Operand = parseFloat(result); //Updates the first operand with the result
+        Calculator.Display_Value = result;
+        Calculator.First_Operand = result; //Updates the first operand with the result
     }
     Calculactor.Wait_Second_Operand = true; 
     Calculator.operator = Next_Operator;
@@ -76,7 +76,7 @@ function Calculator_Reset() {
 //This funciton updates the display with the current value
 function Update_Display() {
     const display = document.querySelector('.calculator-screen');
-    display.value = Calculator.displayValue;
+    display.value = Calculator.Display_Value;
 }
 
 Update_Display();
@@ -84,12 +84,12 @@ Update_Display();
 const keys = document.querySelector('.calculator-keys');
 keys.addEventListener('click', (event) => {
     const { target } = event;
-    if (!target.matches('button')) return; // Ensures only button clicks are processed
+    if (!target.matches('button')) { return;} // Ensures only button clicks are processed
 
     if (target.classList.contains('operator')) {
         Handle_Operator(target.value);
         Update_Display();
-        return;
+        return
     }
 
     if (target.classList.contains('decimal')) {
@@ -103,7 +103,6 @@ keys.addEventListener('click', (event) => {
         Update_Display();
         return;
     }
-
     Input_Digit(target.value);
     Update_Display();
 });
