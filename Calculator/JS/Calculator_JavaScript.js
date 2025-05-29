@@ -2,36 +2,36 @@
 
 //Creates an object to keep track of values
 const Calculator = {
-    displayValue: '0', // Current input value
-    firstOperand: null, // First operand for the operation
-    waitingForSecondOperand: false, // Flag to indicate if waiting for second operand
+    Display_Value: '0', // Current input value
+    First_Operand: null, // First operand for the operation
+    Wait_Second_Operand: false, // Flag to indicate if waiting for second operand
     operator: null, // Current operator
 };
 
 //This modifies values each time a button is clicked
-function inputDigit(digit) {
-    const { displayValue, waitingForSecondOperand } = Calculator;
+function Input_Digit(digit) {
+    const { Display_Value, Wait_Second_Operand } = Calculator;
     //Checks if the Wait_Second_Operand variable is true an sets the displayValue to the digit clicked
-    if (wait_Second_Operand === true) {
-        Calculator.displayValue = digit;
-        Calculator.waitingForSecondOperand = false;
+    if (Wait_Second_Operand === true) {
+        Calculator.Display_Value = digit;
+        Calculator.Wait_Second_Operand = false;
     } else {
         //This overwrites the Display_Value if the current Display_Value is 0. Otherwise, it concatenates the digit to the Display_Value
-        Calculator.displayValue = displayValue === '0' ? digit : displayValue + digit;
+        Calculator.Display_Value = Display_Value === '0' ? digit : Display_Value + digit;
     }
 }
 
 //This section handles decimal points
 function Input_Decimal(dot) {
-    if (Calculator.waitingForSecondOperand === 'true') return;
-    if (!Calculator.displayValue.includes(dot)) {
+    if (Calculator.Wait_Second_Operand === 'true') return;
+    if (!Calculator.Display_Value.includes(dot)) {
         //If the Display_Value does not include a decimal point, it concatenates the dot to the Display_Value
-        Calculator.displayValue += dot;
+        Calculator.Display_Value += dot;
     }    
 }
 
 //This section handles operators
-function handleOperator(nextOperator) {
+function Handle_Operator(Next_Operator) {
     const { First_Operand, Display_Value, operator } = Calculator;
     const Value_of_Input = parseFloat(Display_Value);
 
@@ -42,15 +42,15 @@ function handleOperator(nextOperator) {
     }
 
     //If no first operand exists, it sets the first operand to the input value
-    if (firstOperand === null) {
+    if (First_Operand === null) {
         Calculator.First_Operand = Value_of_Input;
     } else if (operator) {
         const Value_Now = First_Operand || 0;
         let result = Perform_Calculation[operator](Value_Now, Value_of_Input);
         result = Number(result).toFixed(9); //Fixes the result to 9 decimal places
         result = (result * 1).toString(); //Converts the result to a string
-        Calculator.Display_Value = result;
-        Calculator.First_Operand = result; //Updates the first operand with the result
+        Calculator.Display_Value = parseFloat(result);
+        Calculator.First_Operand = parseFloat(result); //Updates the first operand with the result
     }
     Calculactor.Wait_Second_Operand = true; 
     Calculator.operator = Next_Operator;
@@ -87,7 +87,7 @@ keys.addEventListener('click', (event) => {
     if (!target.matches('button')) return; // Ensures only button clicks are processed
 
     if (target.classList.contains('operator')) {
-        handleOperator(target.value);
+        Handle_Operator(target.value);
         Update_Display();
         return;
     }
@@ -104,7 +104,7 @@ keys.addEventListener('click', (event) => {
         return;
     }
 
-    inputDigit(target.value);
+    Input_Digit(target.value);
     Update_Display();
 });
 
