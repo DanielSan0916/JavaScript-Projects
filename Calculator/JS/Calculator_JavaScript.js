@@ -62,7 +62,7 @@ const Perform_Calculation = {
     '*': (First_Operand, Second_Operand) => First_Operand * Second_Operand,
     '+': (First_Operand, Second_Operand) => First_Operand + Second_Operand,
     '-': (First_Operand, Second_Operand) => First_Operand - Second_Operand,
-    '=': (First_Operand, Second_Operand) => Second_Operand,
+    '=': (First_Operand, Second_Operand) => Second_Operand
 };
 
 //Resets the calculator when the AC button is clicked
