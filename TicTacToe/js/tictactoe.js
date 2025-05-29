@@ -1,6 +1,7 @@
+// Tic Tac Toe Game
 let activePlayer = 'X';
 let selectedSquares = [];
-function placeXOrO(squareNumber) {
+function placeXOrO(squareNumber) { // This function places an X or O in a square.
     if (!selectedSquares.some(element => element.includes(squareNumber))) {
         let select = document.getElementById(squareNumber);
         if (activePlayer === 'X') {
@@ -8,7 +9,7 @@ function placeXOrO(squareNumber) {
         } else {
             select.style.backgroundImage = 'url("images/o.png")';
         }
-        selectedSquares.push(squareNumber + activePlayer);
+        selectedSquares.push(squareNumber + activePlayer); // This adds the square number and active player to the selectedSquares array.
         checkWinConditions();
         if (activePlayer === 'X') {
             activePlayer = 'O';
@@ -25,7 +26,7 @@ function placeXOrO(squareNumber) {
         return true;
         
     }
-
+    // This function checks if the square is already selected.
     function computersTurn() {
         let success = false;
         let pickASquare;
@@ -38,6 +39,7 @@ function placeXOrO(squareNumber) {
          }
     }
 }
+// This function checks for win conditions.
 function checkWinConditions() {
     if (arrayIncludes('0X', '1X', '2X')) { drawWinLine(50, 100, 558, 100); }
     else if (arrayIncludes('3X', '4X', '5X')) { drawWinLine(50, 304, 558, 304); }
@@ -59,6 +61,7 @@ function checkWinConditions() {
         audio('./media/tie.mp3');
         setTimeout(function () { resetGame(); }, 500);
     }
+    // This function checks if the selected squares include the given squares.
     function arrayIncludes(squareA, squareB, squareC) {
         const a = selectedSquares.includes(squareA);
         const b = selectedSquares.includes(squareB);
@@ -68,17 +71,17 @@ function checkWinConditions() {
         }
     }
 }
-
+// This function disables clicking while the animation is playing.
 function disableClick() {
     body.style.pointerEvents = 'none';
     setTimeout(function () { body.style.pointerEvents = 'auto'; }, 1000);
 }
-
+// This function plays the audio.
 function audio(audioURL) {
     let audio = new Audio(audioURL);
     audio.play();
 }
-
+// This function draws the winning line.
 function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
     const canvas = document.getElementById('win-lines');
     const c = canvas.getContext('2d');
@@ -88,7 +91,7 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
         y2 = coordY2;
         x = x1,
         y = y1;
-
+// This function clears the canvas and draws the winning line.
     function animateLineDrawing() {
         const animationLoop = requestAnimationFrame(animateLineDrawing);
         c.clearRect(0, 0, 608, 608);
@@ -103,20 +106,20 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
             if (y < y2) { y += 10; }
             if (x >= x2 && y >= y2) { cancelAnimationFrame(animationLoop); }
         }
-
+        // This condition checks if the line is drawn from left to right and top to bottom.
         if (x1 <= x2 && y1 >= y2) {
             if (x < x2) { x += 10; }
             if (y > y2) { y -= 10; }
             if (x >= x2 && y <= y2) { cancelAnimationFrame(animationLoop); }
          }
     }
-
+    // This function clears the canvas after the animation is done.
     function clear() {
         const animationLoop = requestAnimationFrame(clear);
         c.clearRect(0, 0, 608, 608);
         cancelAnimationFrame(animationLoop);
     }
-
+    // This function plays the win sound and animates the line drawing.
     disableClick();
     audio('./media/winGame.mp3');
     animateLineDrawing();
@@ -126,7 +129,7 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
     }, 1000);
     
 }
-
+// This function resets the game.
 function resetGame() {
     for (let i = 0; i < 9; i++) {
         let square = document.getElementById(String(i));
