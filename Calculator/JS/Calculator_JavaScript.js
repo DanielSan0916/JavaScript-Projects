@@ -23,7 +23,7 @@ function Input_Digit(digit) {
 
 //This section handles decimal points
 function Input_Decimal(dot) {
-    if (Calculator.Wait_Second_Operand === 'true') return;
+    if (Calculator.Wait_Second_Operand === true) return;
     if (!Calculator.Display_Value.includes(dot)) {
         //If the Display_Value does not include a decimal point, it concatenates the dot to the Display_Value
         Calculator.Display_Value += dot;
@@ -37,7 +37,7 @@ function Handle_Operator(Next_Operator) {
 
     //Checks if an operator already exists and if the second operand is being waited for
     if (operator && Calculator.Wait_Second_Operand) {
-        Calculator.operator = next_Operator;
+        Calculator.operator = Next_Operator;
         return;
     }
 
