@@ -3,17 +3,18 @@
 <head>
     <title>Play Tic Tac Toe Online!</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/game.css">
-    <script src="js/tictactoe.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive design -->
+    <link rel="stylesheet" href="css/game.css"> <!-- Link to the CSS file -->
+    <script src="js/tictactoe.js" defer></script> <!-- Link to the JavaScript file with defer to load after HTML parsing -->
 </head>
 
 <body id='body'>
     <h1>TIC TAC TOE GAME</h1> <!-- Added header -->
 
-    <div class='center-container'>
+    <div class='center-container'> <!-- Centered container for the game board -->
         <canvas id='win-lines' width='608' height='608'></canvas>
         <table>
+            <!-- Tic Tac Toe grid -->
             <tr>
                 <td id='0' onclick='placeXOrO("0")'> </td>
                 <td id='1' onclick='placeXOrO("1")'> </td>
