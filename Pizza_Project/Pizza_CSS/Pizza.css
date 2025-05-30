@@ -1,19 +1,17 @@
-/*Pizza.css*/
-
+/* Pizza.css */
 body {
-    background-color: darkblue
+    background-color: darkblue;
+    font-family: Arial, sans-serif;
 }
 
 h1 {
     color: white;
     text-align: center;
-    font-family: 'Arial', sans-serif;
 }
 
 h3 {
     color: snow;
     text-align: center;
-    font-family: 'Arial', sans-serif;
 }
 
 div {
@@ -22,60 +20,34 @@ div {
 }
 
 #menuBG {
-    width: 400px;
-    height: 470px;
-    margin: 10PX auto;
+    max-width: 90%;
+    height: auto;
+    margin: 20px auto;
+    padding: 10px;
 }
 
 #frmMenu {
-   width: 600px;
-    height: 200px;
+    max-width: 600px;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
 }
 
-#totalPrice {
-    width: 200px;
-    height: 190px;
-    margin: 20px auto;
-    float: right;
-}
-
-.left {
-    width: 200px;
-    height: 200px;
-    float: left;
-}
-
-.center {
-    width: 200px;
-    height: 200px;
-    float: left;
-}
-
-.right {
-    width: 200px;
-    height: 200px;
-    float: right;
-}
-
-#showText {
-    width: 200px;
-    height: 190px;
-    margin: 0px auto;
-    float: left;
+.menu {
+    flex: 1;
+    padding: 10px;
 }
 
 #cart {
-    top: 0;
-    margin: 0px auto;
-    width: 400px;
-    height: 200px;
+    width: 100%;
+    margin: 20px auto;
+    text-align: center;
 }
 
 #btnOrder {
-    margin: 10px 0px 0px 100px;
+    display: block;
     width: 100px;
     height: 40px;
-    display: block;
-    margin: 25px auto;
+    margin: 20px auto;
+    text-align: center;
 }
-
