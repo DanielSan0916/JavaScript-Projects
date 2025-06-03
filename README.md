@@ -1,21 +1,16 @@
 # Java Script Projects
 Welcome to Java Script Projects—a collection of beginner-friendly JavaScript projects designed to help you learn, practice, and improve your coding skills.
 
-## About This Repository
-This repository is perfect for those who are starting their JavaScript journey or looking for small projects to sharpen their programming knowledge. Each project comes with clear instructions and well-commented code to make learning easier.
+## Projects
+* Pizza Menu
+* Tic-Tac-Toe Game
+* Calculator
 
-## What's Inside?
-- Simple interactive web applications
-- Core JavaScript concepts demonstrated in real projects
-- Step-by-step explanations and beginner-friendly guidance
-- Opportunities to experiment, modify, and improve existing projects
+### Pizza Menu
+This project is a menu used to order pizza with a various selection of toppings. It then takes the input information and calculates a price for the order.
 
-## How to Use This Repository
-- Clone or download the repository.
-- Open the project files in your code editor.
-- Follow the instructions in each project folder.
-- Modify and experiment with the code to enhance your understanding.
+### Tic-Tac-Toe Game
+The classic game of tic-tac-toe. It randomly rolls dice toselect which of the two players goes first and then users are off playing the classic game. Users can decide which token each player wants to use and the winner is celebrated with music and flasign lights.
 
-## Contributing
-If you have an idea for a beginner-friendly project, feel free to contribute! Just fork the repository, make your improvements, and submit a pull request.
-Happy coding! 
+### Calculator
+A basic 4 function calculator. Users can add, subtract, multiply and divide on a sleek web version of a calculator.
