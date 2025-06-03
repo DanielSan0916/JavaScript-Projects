@@ -1,28 +1,98 @@
+/* 
+ * To-Do List Application Styles
+ * This CSS file styles the To-Do List application, providing a clean and modern look.
+ * It includes styles for the input field, buttons, to-do items, and overall layout.
+ */
+
+/* Global Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base Styling */
 html {
-    font-family: "Avenir Next", Helvetica, sans-serif;
-    text-align: center;
+  font-family: "Avenir Next", Helvetica, sans-serif;
+  text-align: center;
 }
 
-Body {
-    max-width: 500px;
-    margin: 0 auto;
+body {
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
 }
 
+/* Container to center the UI elements */
+.todo-container {
+  margin: 0 auto;            /* Centers the container horizontally */
+  max-width: 500px;          /* Sets a maximum width for the container */
+  display: flex;
+  flex-direction: column;    /* Arranges child elements in a column */
+  align-items: center;       /* Centers child elements horizontally */
+}
+
+/* Input Field for Task */
 input {
-    padding-top: 30px;
-    width: 500px;
-    height: 60px;
-    font-size: 40px;
-    border: 0;
+  padding-top: 30px;
+  width: 100%;               /* Uses the full width of the container */
+  height: 60px;
+  font-size: 40px;
+  border: 0;
+  border-radius: 4px;
+  margin-bottom: 10px;       /* Space between the input and the button */
 }
 
 input:focus {
-    outline: none;
+  outline: none;
 }
 
-li {
-    text-align: left;
-    font-size: 40px;
-    list-style: none;
-    margin: 0;
+/* Add Button */
+button#add {
+  padding: 10px 18px;
+  font-size: 1em;
+  background-color: #008cba;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button#add:hover {
+  background-color: #0079a1;
+}
+
+/* Horizontal Rule Separator */
+hr {
+  margin: 20px 0;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+/* To-Do List Container */
+#todo-list {
+  width: 100%;               /* Ensures the list matches the container's width */
+  margin-top: 20px;
+}
+
+/* Individual To-Do Items styled as divs */
+#todo-list > div {
+  background-color: #fff;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Styling */
+footer {
+  margin-top: 40px;
+  padding-top: 10px;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  color: #777;
+  font-size: 0.9em;
 }
