@@ -35,7 +35,7 @@ body {
 
 /* Input Field for Task */
 input {
-  padding-top: 30px;
+  padding-top: 10px;
   width: 100%;               /* Uses the full width of the container */
   height: 60px;
   font-size: 40px;
